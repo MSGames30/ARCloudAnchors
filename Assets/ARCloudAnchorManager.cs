@@ -92,7 +92,7 @@ public class ARCloudAnchorManager : MonoBehaviour
         if (cloudAnchorState == CloudAnchorState.Success)
         {
             anchorResolveInProgress = false;
-            
+            cloudAnchorCreatedEvent?.Invoke(cloudAnchor.transform);
         }
         else if (cloudAnchorState == CloudAnchorState.TaskInProgress)
         {
